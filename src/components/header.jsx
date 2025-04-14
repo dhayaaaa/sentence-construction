@@ -1,10 +1,16 @@
 import React from "react";
-
+const handleQuit = () => {
+  if (window.confirm("Are you sure want to go Dashboard?")) {
+    window.location.href = "/"; // Redirect to home page
+  }
+};
 const Header = () => {
   return (
     <header className="bg-gray-100 shadow-md w-full">
       <div className="max-w-10xl px-4 py-3 flex justify-between items-center">
-        <p className="text-1xl text-gray-800">←</p>
+        <p className="text-1xl text-gray-800" onClick={handleQuit}>
+          ←
+        </p>
         <h1 className="text-1xl font-bold text-gray-800">
           Sentence Construction
         </h1>
