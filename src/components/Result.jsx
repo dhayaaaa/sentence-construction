@@ -1,18 +1,6 @@
 import React from "react";
 import Header from "./header";
 const Result = ({ score, total, userSelections = [] }) => {
-  const correctAnswersCount = userSelections.filter((entry) => {
-    return (
-      Array.isArray(entry.selected) &&
-      Array.isArray(entry.correct) &&
-      entry.selected.length === entry.correct.length &&
-      [...entry.selected]
-        .sort()
-        .every((val, i) => val === [...entry.correct].sort()[i])
-    );
-  }).length;
-
-  const incorrectAnswersCount = total - correctAnswersCount;
   const percentage = Math.round((score / total) * 100);
 
   const radius = 70;

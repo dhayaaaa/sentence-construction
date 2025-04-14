@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./header1";
 const Home = ({ onStart, onBack }) => {
   const handleBackClick = () => {
     const confirmQuit = window.confirm(
@@ -50,7 +49,7 @@ const Home = ({ onStart, onBack }) => {
           </div>
           <div className="text-center ">
             <p className="text-sm text-gray-500">Coins</p>
-            <span className="font-bold">0</span>
+            <span className="font-bold">🪙0</span>
           </div>
         </div>
         <div className="flex space-x-4 items-center justify-center">
